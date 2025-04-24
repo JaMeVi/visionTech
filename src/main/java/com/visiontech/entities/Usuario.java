@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Usuario")
+@Table(name="usuarios")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,7 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name="idRol")
-    private Roles idRol;
+    private Roles rol;
 
 
 

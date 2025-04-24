@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="Notificaciones")
+@Table(name="notificaciones")
 
 public class Notificacion {
 

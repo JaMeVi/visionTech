@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 
 
 @Entity
-@Table(name="Rutas")
+@Table(name="rutas")
 public class Ruta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

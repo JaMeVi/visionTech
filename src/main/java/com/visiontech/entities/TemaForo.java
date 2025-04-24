@@ -10,14 +10,22 @@ import lombok.AllArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="TemasForo")
+@Table(name="temasForo")
 public class TemaForo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTema;
-    private String idTemaRespuesta;
-    private int tituloTemaForo;
+
+    @Column(name="tituloTema",nullable = false,length = 40)
+    private int tituloTema;
+
+    @Column(name="comentario",nullable = false,length = 40)
+    private int comentario;
+
+    @Column(name="fechaCreacion",nullable = false)
     private LocalDate fechaCreacion;
+
+    @Column(name="estadoCerrado",nullable = false)
     private boolean estadoCerrado;
 
     @ManyToOne

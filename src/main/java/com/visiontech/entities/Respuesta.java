@@ -8,16 +8,19 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Respuestas")
+@Table(name="respuestas")
 public class Respuesta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Respuesta;
-    @Column(name="idTema",nullable = false)
-    private String idTema;
-    @Column(name="ContenidoRespuesta",nullable = false)
-    private String ContenidoRespuesta;
+    private int idRespuesta;
+
+    @Column(name="respuesta",nullable = false,length = 50)
+    private String respuesta;
+
     @Column(name="fechaRespuesta",nullable = false)
     private LocalDate fechaRespuesta;
 
+    @ManyToOne
+    @JoinColumn(name="idTema")
+    private TemaForo temaForo;
 }

@@ -32,5 +32,5 @@ public class Metrica {
 
     @OneToOne
     @JoinColumn(name = "id_ruta")
-    private Ruta id_ruta;
+    private Ruta ruta;
 }
