@@ -15,8 +15,22 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
 
+    @Column(name="nombre",nullable = false,length = 45)
     private String nombre;
-    private String contrasenia;
-    private String correolectronico;
+
+    @Column(name="contrasena",nullable = false,length = 45)
+    private String contrasena;
+
+    @Column(name="correoElectronico",nullable = false,length = 45)
+    private String correoElectronico;
+
+    @Column(name="telefono",nullable = false)
     private int telefono;
+
+    @ManyToOne
+    @JoinColumn(name="idRol")
+    private Roles idRol;
+
+
+
 }

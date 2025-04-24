@@ -11,15 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "Roles")
 public class Roles {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_rol")
     private int idRol;
 
-    @Column(name = "nombre_rol")
-    private int nombre_rol;
+    @Column(name = "nombreRol")
+    private int nombreRol;
 
-    @OneToOne
-    @JoinColumn(name = "idUsuario")
-    private Usuario usuario;
-}
+ }
