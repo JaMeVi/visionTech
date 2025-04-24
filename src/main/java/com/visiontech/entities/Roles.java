@@ -17,6 +17,6 @@ public class Roles {
     private int idRol;
 
     @Column(name = "nombreRol")
-    private int nombreRol;
+    private String nombreRol;
 
  }
