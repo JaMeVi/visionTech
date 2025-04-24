@@ -10,17 +10,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@Table(name = "Contactos_emergencia")
+@Table(name = "contactos_emergencia")
 public class Contacto_emergencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_contacto;
+    private int idContacto;
 
     @Column(name = "nombre",nullable = false,length = 45)
     private String nombre;
 
-    @Column(name = "telefono",nullable = false,length = 45)
-    private String telefono;
+    @Column(name = "telefono",nullable = false)
+    private int telefono;
 
     @Column(name = "correo_electronico",nullable = false,length = 45)
     private String correo_electronico;

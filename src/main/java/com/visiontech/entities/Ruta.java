@@ -31,7 +31,7 @@ public class Ruta {
     @Column(name="distanciaMetros",nullable = false)
     private int distanciaMinutos;
 
-    @Column(name="tiempoMinutos",nullable = false)
+    @Column(name="tiempoRuta",nullable = false)
     private int tiempoRuta;
 
     @Column(name="longitud",nullable = false)
@@ -40,6 +40,8 @@ public class Ruta {
     @Column(name="latitud",nullable = false)
     private int latitud;
 
-
+    @ManyToOne
+    @JoinColumn(name="idUsuario")
+    private Usuario usuario;
 
 }

@@ -12,25 +12,25 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@Table(name = "Metricas")
+@Table(name = "metricas")
 public class Metrica {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_metricas;
+    private int idMetrica;
 
-    @Column(name = "numero_pasos", nullable = false)
-    private int numero_pasos;
+    @Column(name = "numeroPasos", nullable = false)
+    private int numeroPasos;
 
-    @Column(name = "caloria_quemadas", nullable = false)
-    private int caloria_quemadas;
+    @Column(name = "caloriaQuemadas", nullable = false)
+    private int caloriasQuemadas;
 
-    @Column(name = "tiempo_efectivo_minutos", nullable = false)
-    private int tiempo_efectivo_minutos;
+    @Column(name = "tiempoEfectivoMinutos", nullable = false)
+    private int tiempoEfectivoMinutos;
 
     @Column(name = "fecha",nullable = false)
     private LocalDate fecha;
 
     @OneToOne
-    @JoinColumn(name = "id_ruta")
+    @JoinColumn(name = "idRuta")
     private Ruta ruta;
 }

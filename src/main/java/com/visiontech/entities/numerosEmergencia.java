@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="numerosEmergencia")
+@Table(name="numeros_emergencia")
 public class numerosEmergencia {
 
     @Id

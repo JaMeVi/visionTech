@@ -9,9 +9,9 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name="condiciones_atmosfericas")
 public class CondicionAtmosferica {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCondicionAtmosferica;

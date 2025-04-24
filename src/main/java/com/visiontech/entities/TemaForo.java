@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="temasForo")
+@Table(name="tema_foro")
 public class TemaForo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
