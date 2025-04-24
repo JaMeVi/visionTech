@@ -31,7 +31,7 @@ public class UsuarioDTO {
         this.contrasenia = contrasenia;
     }
 
-    public
+
 
 
 }
