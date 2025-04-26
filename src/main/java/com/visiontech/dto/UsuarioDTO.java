@@ -3,8 +3,8 @@ package com.visiontech.dto;
 public class UsuarioDTO {
     private int idUsuario;
     private String nombre;
-    private String contrasenia;
-    private String correolectronico;
+    private String contrasena;
+    private String correoElectronico;
     private int telefono;
 
     public int getIdUsuario() {
@@ -15,23 +15,35 @@ public class UsuarioDTO {
         this.idUsuario = idUsuario;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getContrasenia(){
-        return contrasenia;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContrasenia(String contrasenia){
-        this.contrasenia = contrasenia;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
 
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
 
+    public int getTelefono() {
+        return telefono;
+    }
 
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
 }

@@ -1,4 +1,15 @@
 package com.visiontech.repositories;
 
-public interface RutaRepository {
+import com.visiontech.entities.Ruta;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface RutaRepository extends JpaRepository<Ruta,Integer>{
 }
+
