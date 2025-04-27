@@ -15,7 +15,7 @@ public class RutasController {
     ServiceRoute serviceRoute;
 
     @GetMapping("/rutas")
-    public List<DTORoute> getAll(){
+    public List<DTORoute> getAllRoute(){
         return serviceRoute.findAll();
     }
     @GetMapping("/rutas/{id}")
@@ -23,15 +23,15 @@ public class RutasController {
         return serviceRoute.findById(id);
     }
     @PostMapping("/rutas")
-    public DTORoute create(@RequestBody DTORoute dTORoute){
+    public DTORoute createRoute(@RequestBody DTORoute dTORoute){
         return serviceRoute.save(dTORoute);
     }
     @PutMapping("/rutas/{id}")
-    public DTORoute update(@PathVariable int id, @RequestBody DTORoute dTORoute){
+    public DTORoute updateRoute(@PathVariable int id, @RequestBody DTORoute dTORoute){
         return serviceRoute.update(id, dTORoute);
     }
     @DeleteMapping("/rutas/{id}")
-    public boolean delete(@PathVariable int id){
+    public boolean deleteRoute(@PathVariable int id){
         return serviceRoute.delete(id);
     }
 
