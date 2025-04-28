@@ -1,18 +1,13 @@
 package com.visiontech.services;
 
 import com.visiontech.entities.Contacto_emergencia;
-import com.visiontech.repositories.ContactoEmergenciaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import java.util.List;
 
-@Service
-public class ContactoEmergenciaService {
-
-    @Autowired
-    private ContactoEmergenciaRepository contactoEmergenciaRepository;
-
-    public List<Contacto_emergencia> buscarPorNombre(String nombre) {
-        return contactoEmergenciaRepository.findByNombreContainingIgnoreCase(nombre);
-    }
+public interface ContactoEmergenciaService {
+    List<Contacto_emergencia> list();
+    void insert(Contacto_emergencia contactoEmergencia);
+    Contacto_emergencia listId(int idContacto);
+    void update(Contacto_emergencia contactoEmergencia);
+    void delete(int idContacto);
+    List<Contacto_emergencia> buscarPorNombre(String nombre);
 }
