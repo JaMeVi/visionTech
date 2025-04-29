@@ -1,5 +1,6 @@
 package com.visiontech.controller;
 
+import com.visiontech.services.MetricaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class MetricaController{
 
     @Autowired
-    private MetricaController mC;
-
+    private MetricaService mS;
     @GetMapping
     public String listar(){
         return "Metricas";
