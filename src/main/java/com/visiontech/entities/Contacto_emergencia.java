@@ -22,8 +22,8 @@ public class Contacto_emergencia {
     @Column(name = "telefono",nullable = false)
     private int telefono;
 
-    @Column(name = "correo_electronico",nullable = false,length = 45)
-    private String correo_electronico;
+    @Column(name = "correoElectronico",nullable = false,length = 45)
+    private String correoElectronico;
 
     @ManyToOne
     @JoinColumn(name = "idUsuario")
