@@ -8,9 +8,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name="usuarios")
 public class Usuario implements Serializable {
     @Id
@@ -38,4 +35,80 @@ public class Usuario implements Serializable {
     @JoinColumn(name="idRol")
     private List<Rol> rol;
 
+    public Usuario() {}
+
+    public Usuario(long idUsuario, String username, String password, Boolean enabled, String nombre, String correoElectronico, int telefono, List<Rol> rol) {
+        this.idUsuario = idUsuario;
+        this.username = username;
+        this.password = password;
+        this.enabled = enabled;
+        this.nombre = nombre;
+        this.correoElectronico = correoElectronico;
+        this.telefono = telefono;
+        this.rol = rol;
+    }
+
+    public long getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public List<Rol> getRol() {
+        return rol;
+    }
+
+    public void setRol(List<Rol> rol) {
+        this.rol = rol;
+    }
 }

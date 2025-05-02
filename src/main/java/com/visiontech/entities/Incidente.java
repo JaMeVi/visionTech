@@ -6,10 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-
 @Table(name = "incidentes")
 public class Incidente {
     @Id
@@ -28,4 +24,54 @@ public class Incidente {
     @ManyToOne
     @JoinColumn(name = "idRuta")
     private Ruta ruta;
+
+    public Incidente() {}
+
+    public Incidente(int idIncidente, String tipo, String gravedad, String descripcion, Ruta ruta) {
+        this.idIncidente = idIncidente;
+        this.tipo = tipo;
+        this.gravedad = gravedad;
+        this.descripcion = descripcion;
+        this.ruta = ruta;
+    }
+
+    public int getIdIncidente() {
+        return idIncidente;
+    }
+
+    public void setIdIncidente(int idIncidente) {
+        this.idIncidente = idIncidente;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getGravedad() {
+        return gravedad;
+    }
+
+    public void setGravedad(String gravedad) {
+        this.gravedad = gravedad;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Ruta getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(Ruta ruta) {
+        this.ruta = ruta;
+    }
 }

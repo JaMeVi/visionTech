@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id","rol"})} )
+@Table(name="roles")
 public class Rol implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +34,29 @@ public class Rol implements Serializable {
 
     public void setRol(String nombreRol) {
         this.rol = nombreRol;
+    }
+
+    @ManyToOne
+    @JoinColumn(name="idUsuario")
+    private Usuario usuario;
+
+    public Rol() {}
+
+    public Rol(Long idRol, String rol, Usuario usuario) {
+        this.idRol = idRol;
+        this.rol = rol;
+        this.usuario = usuario;
+    }
+
+    public void setIdRol(Long idRol) {
+        this.idRol = idRol;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
