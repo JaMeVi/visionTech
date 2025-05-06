@@ -3,9 +3,6 @@ package com.visiontech.entities;
 import java.time.LocalDate;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 @Entity
 @Table(name="tema_foro")
 public class TemaForo {
