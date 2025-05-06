@@ -1,16 +1,8 @@
 package com.visiontech.dto;
 import com.visiontech.entities.Usuario;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class RutaDTO {
     private int idRuta;
     private String nombreRuta;

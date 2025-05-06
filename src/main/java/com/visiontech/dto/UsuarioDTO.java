@@ -1,7 +1,6 @@
 package com.visiontech.dto;
 
 import com.visiontech.entities.Rol;
-import jakarta.persistence.*;
 
 import java.util.List;
 

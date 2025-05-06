@@ -1,9 +1,6 @@
 package com.visiontech.dto;
 
 import com.visiontech.entities.TemaForo;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDate;
 

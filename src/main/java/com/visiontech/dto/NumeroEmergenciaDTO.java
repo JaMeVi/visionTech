@@ -1,9 +1,6 @@
 package com.visiontech.dto;
 
 import com.visiontech.entities.Usuario;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 public class NumeroEmergenciaDTO {
     private int idNumeroEmergencia;
