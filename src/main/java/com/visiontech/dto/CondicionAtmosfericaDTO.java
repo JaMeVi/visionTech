@@ -1,9 +1,6 @@
 package com.visiontech.dto;
 
 import com.visiontech.entities.Ruta;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
