@@ -1,16 +1,9 @@
 package com.visiontech.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name="roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id","rol"})} )
 public class Rol implements Serializable {
     @Id
@@ -19,6 +12,13 @@ public class Rol implements Serializable {
 
     @Column(name="Rol",nullable = false,length = 40)
     private String rol;
+
+    public Rol() {}
+
+    public Rol(Long idRol, String rol) {
+        this.idRol = idRol;
+        this.rol = rol;
+    }
 
     public long getIdRol() {
         return idRol;
@@ -35,4 +35,5 @@ public class Rol implements Serializable {
     public void setRol(String nombreRol) {
         this.rol = nombreRol;
     }
+
 }
