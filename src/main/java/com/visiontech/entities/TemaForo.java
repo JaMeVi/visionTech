@@ -7,9 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name="tema_foro")
 public class TemaForo {
     @Id
@@ -31,6 +28,17 @@ public class TemaForo {
     @ManyToOne
     @JoinColumn(name="idUsuario")
     private Usuario usuario;
+
+    public TemaForo(){}
+
+    public TemaForo(int idTema, String tituloTema, String comentario, LocalDate fechaCreacion, boolean estadoCerrado, Usuario usuario) {
+        this.idTema = idTema;
+        this.tituloTema = tituloTema;
+        this.comentario = comentario;
+        this.fechaCreacion = fechaCreacion;
+        this.estadoCerrado = estadoCerrado;
+        this.usuario = usuario;
+    }
 
     public int getIdTema() {
         return idTema;

@@ -6,9 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name="numeroEmergencia")
 public class NumeroEmergencia {
 
@@ -28,4 +25,54 @@ public class NumeroEmergencia {
     @ManyToOne
     @JoinColumn(name="idUsuario")
     private Usuario usuario;
+
+    public NumeroEmergencia() {}
+
+    public NumeroEmergencia(int idNumeroEmergencia, String tipoEmergencia, String distrito, int telefonoEmergencia, Usuario usuario) {
+        this.idNumeroEmergencia = idNumeroEmergencia;
+        this.tipoEmergencia = tipoEmergencia;
+        this.distrito = distrito;
+        this.telefonoEmergencia = telefonoEmergencia;
+        this.usuario = usuario;
+    }
+
+    public int getIdNumeroEmergencia() {
+        return idNumeroEmergencia;
+    }
+
+    public void setIdNumeroEmergencia(int idNumeroEmergencia) {
+        this.idNumeroEmergencia = idNumeroEmergencia;
+    }
+
+    public String getTipoEmergencia() {
+        return tipoEmergencia;
+    }
+
+    public void setTipoEmergencia(String tipoEmergencia) {
+        this.tipoEmergencia = tipoEmergencia;
+    }
+
+    public String getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
+    }
+
+    public int getTelefonoEmergencia() {
+        return telefonoEmergencia;
+    }
+
+    public void setTelefonoEmergencia(int telefonoEmergencia) {
+        this.telefonoEmergencia = telefonoEmergencia;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

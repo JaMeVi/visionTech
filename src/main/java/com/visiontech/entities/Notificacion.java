@@ -7,9 +7,6 @@ import lombok.Data;
 import java.time.LocalDate;
 import java.util.Date;
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name="notificaciones")
 
 public class Notificacion {
@@ -30,4 +27,54 @@ public class Notificacion {
     @ManyToOne
     @JoinColumn(name="idRuta")
     private Ruta ruta;
+
+    public Notificacion() {}
+
+    public Notificacion(int idNotificacion, String titulo, String contenido, LocalDate fechaHora, Ruta ruta) {
+        this.idNotificacion = idNotificacion;
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.fechaHora = fechaHora;
+        this.ruta = ruta;
+    }
+
+    public int getIdNotificacion() {
+        return idNotificacion;
+    }
+
+    public void setIdNotificacion(int idNotificacion) {
+        this.idNotificacion = idNotificacion;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public LocalDate getFechaHora() {
+        return fechaHora;
+    }
+
+    public void setFechaHora(LocalDate fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+
+    public Ruta getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(Ruta ruta) {
+        this.ruta = ruta;
+    }
 }

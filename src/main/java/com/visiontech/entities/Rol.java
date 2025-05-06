@@ -20,11 +20,11 @@ public class Rol implements Serializable {
         this.rol = rol;
     }
 
-    public long getIdRol() {
+    public Long getIdRol() {
         return idRol;
     }
 
-    public void setIdRol(long idRol) {
+    public void setIdRol(Long idRol) {
         this.idRol = idRol;
     }
 
@@ -32,8 +32,7 @@ public class Rol implements Serializable {
         return rol;
     }
 
-    public void setRol(String nombreRol) {
-        this.rol = nombreRol;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
-
 }

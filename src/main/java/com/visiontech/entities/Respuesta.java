@@ -5,9 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name="respuestas") //
 public class Respuesta {
     @Id
@@ -24,7 +21,13 @@ public class Respuesta {
     @JoinColumn(name="idTema")
     private TemaForo temaForo;
 
-
+    public Respuesta() {}
+    public Respuesta(int idRespuesta, String respuesta, LocalDate fechaRespuesta, TemaForo temaForo) {
+        this.idRespuesta = idRespuesta;
+        this.respuesta = respuesta;
+        this.fechaRespuesta = fechaRespuesta;
+        this.temaForo = temaForo;
+    }
 
     public int getIdRespuesta() {
         return idRespuesta;
