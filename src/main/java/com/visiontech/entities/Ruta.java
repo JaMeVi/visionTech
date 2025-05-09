@@ -1,8 +1,5 @@
 package com.visiontech.entities;
 import jakarta.persistence.*;
-
-
-
 @Entity
 @Table(name="rutas")
 public class Ruta {
