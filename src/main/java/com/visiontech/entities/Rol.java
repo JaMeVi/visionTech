@@ -13,6 +13,11 @@ public class Rol implements Serializable {
     @Column(name="Rol",nullable = false,length = 40)
     private String rol;
 
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private Usuario usuario;
+
     public Rol() {}
 
     public Rol(Long idRol, String rol) {
