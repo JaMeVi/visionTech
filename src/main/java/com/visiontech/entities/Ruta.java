@@ -20,7 +20,10 @@ public class Ruta {
     private String fin;
 
     @Column(name="distanciaMetros",nullable = false)
-    private int distanciaMinutos;
+    private int distanciaMetros;
+
+    @Column(name = "favorito", nullable = false)
+    private boolean favorito;
 
     @Column(name="tiempoRuta",nullable = false)
     private int tiempoRuta;
@@ -37,13 +40,14 @@ public class Ruta {
 
     public Ruta() {}
 
-    public Ruta(int idRuta, String nombreRuta, String destino, String inicio, String fin, int distanciaMinutos, int tiempoRuta, int longitud, int latitud, Usuario usuario) {
+    public Ruta(int idRuta, String nombreRuta, String destino, String inicio, String fin, int distanciaMetros, int tiempoRuta, int longitud, int latitud, boolean favorito, Usuario usuario) {
         this.idRuta = idRuta;
         this.nombreRuta = nombreRuta;
         this.destino = destino;
         this.inicio = inicio;
         this.fin = fin;
-        this.distanciaMinutos = distanciaMinutos;
+        this.favorito = favorito;
+        this.distanciaMetros = distanciaMetros;
         this.tiempoRuta = tiempoRuta;
         this.longitud = longitud;
         this.latitud = latitud;
@@ -90,20 +94,26 @@ public class Ruta {
         this.fin = fin;
     }
 
-    public int getDistanciaMinutos() {
-        return distanciaMinutos;
-    }
-
-    public void setDistanciaMinutos(int distanciaMinutos) {
-        this.distanciaMinutos = distanciaMinutos;
-    }
-
     public int getTiempoRuta() {
         return tiempoRuta;
     }
 
     public void setTiempoRuta(int tiempoRuta) {
         this.tiempoRuta = tiempoRuta;
+    }
+
+    public int getDistanciaMetros() {
+        return distanciaMetros;
+    }
+
+    public void setDistanciaMetros(int distanciaMetros) {
+        this.distanciaMetros = distanciaMetros;
+    }
+
+    public boolean isFavorito() {return favorito;
+    }
+
+    public void setFavorito(boolean favorito) {this.favorito = favorito;
     }
 
     public int getLongitud() {
