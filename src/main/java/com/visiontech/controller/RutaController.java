@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/rutas")
 public class RutaController {
     @Autowired
-    private RutaService rS;
+    private IRutaService rS;
 
     @GetMapping
     public List<RutaDTO> listar() {
@@ -57,6 +57,21 @@ public class RutaController {
             ModelMapper m = new ModelMapper();
             return m.map(x, RutaDTO.class);
         }).collect(Collectors.toList());
+    }
+    @PutMapping("/marcarfavorito/{id}/{estado}")
+    public void marcarFavorito(@PathVariable("id") int id, @PathVariable("estado") boolean estado) {
+        rS.marcarFavorita(id, estado);
+    }
+
+    @GetMapping("/favoritas")
+    public ResponseEntity<List<Ruta>> listarFavoritas() {
+        return ResponseEntity.ok(rS.listarFavoritas());
+
+    }
+
+    @GetMapping("/calorias-estimadas/{id}")
+    public double caloriasEstimadas(@PathVariable("id") int id) {
+        return rS.estimarCalorias(id);
     }
 
 }
