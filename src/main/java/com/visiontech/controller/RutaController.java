@@ -58,5 +58,20 @@ public class RutaController {
             return m.map(x, RutaDTO.class);
         }).collect(Collectors.toList());
     }
+    @PutMapping("/marcarfavorito/{id}/{estado}")
+    public void marcarFavorito(@PathVariable("id") int id, @PathVariable("estado") boolean estado) {
+        rS.marcarFavorita(id, estado);
+    }
+
+    @GetMapping("/favoritas")
+    public ResponseEntity<List<Ruta>> listarFavoritas() {
+        return ResponseEntity.ok(rS.listarFavoritas());
+
+    }
+
+    @GetMapping("/calorias-estimadas/{id}")
+    public double caloriasEstimadas(@PathVariable("id") int id) {
+        return rS.estimarCalorias(id);
+    }
 
 }
