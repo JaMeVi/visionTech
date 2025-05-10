@@ -11,4 +11,7 @@ public interface IRutaService {
     public void update(Ruta r);
     public void delete(int idRuta);
     public List<Ruta> buscarPorNombre(String nombre);
+    public void marcarFavorita(int idRuta, boolean estado);
+    List<Ruta> listarFavoritas();
+    public double estimarCalorias(int idRuta);
 }
