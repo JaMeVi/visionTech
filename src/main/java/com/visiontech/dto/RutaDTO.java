@@ -9,7 +9,8 @@ public class RutaDTO {
     private String destino;
     private String inicio;
     private String fin;
-    private int distanciaMinutos;
+    private boolean favorito;
+    private int distanciaMetros;
     private int tiempoRuta;
     private int longitud;
     private int latitud;
@@ -55,12 +56,20 @@ public class RutaDTO {
         this.fin = fin;
     }
 
-    public int getDistanciaMinutos() {
-        return distanciaMinutos;
+    public boolean isFavorito() {
+        return favorito;
     }
 
-    public void setDistanciaMinutos(int distanciaMinutos) {
-        this.distanciaMinutos = distanciaMinutos;
+    public void setFavorito(boolean favorito) {
+        this.favorito = favorito;
+    }
+
+    public int getDistanciaMetros() {
+        return distanciaMetros;
+    }
+
+    public void setDistanciaMetros(int distanciaMetross) {
+        this.distanciaMetros = distanciaMetross;
     }
 
     public int getTiempoRuta() {
@@ -95,6 +104,8 @@ public class RutaDTO {
         this.usuario = usuario;
     }
 }
+
+
 
 
 
